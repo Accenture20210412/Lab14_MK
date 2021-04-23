@@ -16,8 +16,13 @@ public class TripRepository implements ITripRepository {
 
     private List<Trip> listOfTrip = new ArrayList<>();
 
+
+
+
     @Override
     public List<Trip> getListOfTrip() {
+
+
         return listOfTrip;
     }
 

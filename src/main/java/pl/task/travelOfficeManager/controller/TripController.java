@@ -30,20 +30,20 @@ public class TripController {
     }
 
 
-    @GetMapping("/{nameOfTrip}")
-    public boolean searchTripByName(@PathVariable String nameOfTrip) {
+    @GetMapping(params = "nameOfTrip")
+    public boolean searchTripByName(@RequestParam(name = "nameOfTrip")  String nameOfTrip) {
         return tripRepository.searchTripByName(nameOfTrip);
     }
 
     @ResponseBody
-    @GetMapping("/{date}")
-    public List<Trip> searchTripStartAfterDate(@PathVariable LocalDate date) {
+    @GetMapping(params = "date")
+    public List<Trip> searchTripStartAfterDate(@RequestParam(name = "date")  LocalDate date) {
         return tripRepository.searchTripStartAfterDate(date);
     }
 
     @ResponseBody
-    @GetMapping("/{direction}")
-    public List<Trip> searchTripByDirection(@PathVariable String direction) {
+    @GetMapping(params = "direction")
+    public List<Trip> searchTripByDirection(@RequestParam(name = "direction") String direction) {
         return tripRepository.searchTripByDirection(direction);
     }
 

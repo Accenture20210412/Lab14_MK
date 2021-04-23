@@ -21,8 +21,8 @@ public class CustomerController {
         customerRepository.addCustomer(customer);
     }
 
-    @DeleteMapping ("/{id}")
-    public void deleteCustomer(@PathVariable int idCustomer){
+    @DeleteMapping (params = "idCustomer")
+    public void deleteCustomer(@RequestParam(name = "nameOfTrip")  Integer idCustomer){
         customerRepository.deleteCustomer(idCustomer);
     }
 
