@@ -26,6 +26,7 @@ public class TripController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public boolean addTrip(@RequestBody Trip trip) {
+        System.out.println(trip.getName());
         return tripRepository.addTrip(trip);
     }
 
@@ -45,6 +46,11 @@ public class TripController {
     @GetMapping(params = "direction")
     public List<Trip> searchTripByDirection(@RequestParam(name = "direction") String direction) {
         return tripRepository.searchTripByDirection(direction);
+    }
+
+    @DeleteMapping (params = "nameOfTrip")
+    public void deleteTrip(@RequestParam(name = "nameOfTrip")  String nameOfTrip){
+        tripRepository.deleteTrip(nameOfTrip);
     }
 
 }

@@ -22,7 +22,7 @@ public class CustomerController {
     }
 
     @DeleteMapping (params = "idCustomer")
-    public void deleteCustomer(@RequestParam(name = "nameOfTrip")  Integer idCustomer){
+    public void deleteCustomer(@RequestParam(name = "idCustomer")  Integer idCustomer){
         customerRepository.deleteCustomer(idCustomer);
     }
 

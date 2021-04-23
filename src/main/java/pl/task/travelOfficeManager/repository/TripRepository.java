@@ -59,4 +59,11 @@ public class TripRepository implements ITripRepository {
                 .filter(d -> d.getLocationDirection().contains(direction))
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public void deleteTrip(String nameOfTrip) {
+        listOfTrip = listOfTrip.stream()
+                .filter(c-> !c.getName().equals(nameOfTrip))
+                .collect(Collectors.toList());
+    }
 }

@@ -17,4 +17,6 @@ public interface ITripRepository {
 
     List<Trip> searchTripByDirection(String direction);
 
+    void deleteTrip(String nameOfTrip);
+
 }
