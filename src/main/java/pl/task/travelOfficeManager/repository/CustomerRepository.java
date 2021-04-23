@@ -7,6 +7,7 @@ import pl.task.travelOfficeManager.repository.boundary.ICustomerRepository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Getter
 @Repository
@@ -21,9 +22,11 @@ public class CustomerRepository implements ICustomerRepository {
     }
 
     @Override
-    public void deleteCustomer(String partOfNameOrSurname) {
-        listOfCustomer.removeIf(partString -> partString.getName().contains(partOfNameOrSurname));
-        listOfCustomer.removeIf(partString -> partString.getSurname().contains(partOfNameOrSurname));
+    public void deleteCustomer(int id) {
+        listOfCustomer = listOfCustomer.stream()
+                .filter(c-> c.getIdCustomer() != id)
+                .collect(Collectors.toList());
+
     }
 
     @Override

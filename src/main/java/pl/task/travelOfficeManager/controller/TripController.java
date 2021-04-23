@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import pl.task.travelOfficeManager.model.Trip;
 import pl.task.travelOfficeManager.repository.boundary.ITripRepository;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -22,7 +23,7 @@ public class TripController {
         return tripRepository.getListOfTrip();
     }
 
-    @PostMapping()
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public boolean addTrip(@RequestBody Trip trip) {
         return tripRepository.addTrip(trip);
@@ -34,5 +35,16 @@ public class TripController {
         return tripRepository.searchTripByName(nameOfTrip);
     }
 
+    @ResponseBody
+    @GetMapping("/{date}")
+    public List<Trip> searchTripStartAfterDate(@PathVariable LocalDate date) {
+        return tripRepository.searchTripStartAfterDate(date);
+    }
+
+    @ResponseBody
+    @GetMapping("/{direction}")
+    public List<Trip> searchTripByDirection(@PathVariable String direction) {
+        return tripRepository.searchTripByDirection(direction);
+    }
 
 }

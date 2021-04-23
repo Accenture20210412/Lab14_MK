@@ -8,7 +8,7 @@ public interface ICustomerRepository {
 
     void addCustomer(Customer customer);
 
-    void deleteCustomer(String partOfNameOrSurname);
+    void deleteCustomer(int idCustomer);
 
     List<Customer> getListOfCustomer();
 }
