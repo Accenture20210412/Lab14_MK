@@ -30,7 +30,7 @@ public class TripController {
     }
 
 
-    @GetMapping("/{name}")
+    @GetMapping("/{nameOfTrip}")
     public boolean searchTripByName(@PathVariable String nameOfTrip) {
         return tripRepository.searchTripByName(nameOfTrip);
     }
