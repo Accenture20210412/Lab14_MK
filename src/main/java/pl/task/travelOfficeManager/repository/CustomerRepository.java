@@ -7,11 +7,12 @@ import pl.task.travelOfficeManager.repository.boundary.ICustomerRepository;
 
 import java.util.ArrayList;
 import java.util.List;
+
 @Getter
 @Repository
 public class CustomerRepository implements ICustomerRepository {
 
-    private  List<Customer> listOfCustomer = new ArrayList<>();
+    private List<Customer> listOfCustomer = new ArrayList<>();
 
 
     @Override

@@ -7,10 +7,14 @@ import java.util.List;
 import java.util.Set;
 
 public interface ITripRepository {
-    public List<Trip> getListOfTrip();
-    public boolean addTrip(Trip trip);
-    public boolean searchTripByName(String nameOfTrip);
-    public List<Trip> searchTripStartAfterDate(LocalDate date);
-    public List<Trip> searchTripByDirection(String direction);
+    List<Trip> getListOfTrip();
+
+    boolean addTrip(Trip trip);
+
+    boolean searchTripByName(String nameOfTrip);
+
+    List<Trip> searchTripStartAfterDate(LocalDate date);
+
+    List<Trip> searchTripByDirection(String direction);
 
 }

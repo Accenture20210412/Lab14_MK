@@ -6,7 +6,9 @@ import java.util.List;
 
 public interface ICustomerRepository {
 
-    public void addCustomer(Customer customer);
-    public void deleteCustomer(String partOfNameOrSurname);
-    public List<Customer> getListOfCustomer();
+    void addCustomer(Customer customer);
+
+    void deleteCustomer(String partOfNameOrSurname);
+
+    List<Customer> getListOfCustomer();
 }

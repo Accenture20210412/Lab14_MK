@@ -24,8 +24,8 @@ public class TripRepository implements ITripRepository {
 
     @Override
     public boolean addTrip(Trip trip) {
-        for(Trip tripExample : listOfTrip) {
-            if(tripExample.getName().equals(trip.getName())) {
+        for (Trip tripExample : listOfTrip) {
+            if (tripExample.getName().equals(trip.getName())) {
                 return false;
             }
         }
@@ -44,14 +44,14 @@ public class TripRepository implements ITripRepository {
     @Override
     public List<Trip> searchTripStartAfterDate(LocalDate date) {
         return listOfTrip.stream()
-                .filter(d->d.getDateStart().isAfter(date))
+                .filter(d -> d.getDateStart().isAfter(date))
                 .collect(Collectors.toList());
     }
 
     @Override
     public List<Trip> searchTripByDirection(String direction) {
         return listOfTrip.stream()
-                .filter(d->d.getLocationDirection().contains(direction))
+                .filter(d -> d.getLocationDirection().contains(direction))
                 .collect(Collectors.toList());
     }
 }
