@@ -11,8 +11,8 @@ public class AbroadTrip extends Trip {
 
     private double insurance;
 
-    public AbroadTrip(LocalDate dateStart, LocalDate dateEnd, String locationDirection, double price, double insurance) {
-        super(dateStart, dateEnd, locationDirection, price);
+    public AbroadTrip(LocalDate dateStart, LocalDate dateEnd, String locationDirection, double price, double insurance, String name) {
+        super(dateStart, dateEnd, locationDirection, price,name);
         this.insurance = insurance;
     }
 

@@ -14,17 +14,17 @@ public class Main {
     public static void main(String[] args) {
         TravelOffice travelOffice = new TravelOffice();
 
-        AbroadTrip abroadTrip = new AbroadTrip(LocalDate.of(2021, 4, 12), LocalDate.of(2021, 04, 12), "California", 7650, 350);
-        DomesticTrip domesticTrip = new DomesticTrip(LocalDate.of(2021, 8, 12), LocalDate.of(2021, 10, 5), "Kazimierz", 600, 50);
+     //   AbroadTrip abroadTrip = new AbroadTrip(LocalDate.of(2021, 4, 12), LocalDate.of(2021, 04, 12), "California", 7650, 350);
+      //  DomesticTrip domesticTrip = new DomesticTrip(LocalDate.of(2021, 8, 12), LocalDate.of(2021, 10, 5), "Kazimierz", 600, 50);
 
-        Customer customer1 = new Customer("Alex", "Smith", "Katowice",abroadTrip);
-        Customer customer2 = new Customer("Bary", "Travery", "Wroclaw", domesticTrip);
-        Customer customer3 = new Customer("Tom", "Mellow", "Warszawa");
+//        Customer customer1 = new Customer("Alex", "Smith", "Katowice",abroadTrip);
+//        Customer customer2 = new Customer("Bary", "Travery", "Wroclaw", domesticTrip);
+//        Customer customer3 = new Customer("Tom", "Mellow", "Warszawa");
 
 
-        travelOffice.addCustomer(customer1);
-        travelOffice.addCustomer(customer2);
-        travelOffice.addCustomer(customer3);
+//        travelOffice.addCustomer(customer1);
+//        travelOffice.addCustomer(customer2);
+//        travelOffice.addCustomer(customer3);
 
 
 

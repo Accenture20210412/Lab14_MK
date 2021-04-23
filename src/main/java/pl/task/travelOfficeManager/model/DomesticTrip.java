@@ -11,8 +11,8 @@ public class DomesticTrip extends Trip{
     private double discountDriveYourselfPercent;
 
 
-    public DomesticTrip(LocalDate dateStart, LocalDate dateEnd, String locationDirection, double price, double discountDriveYourself) {
-        super(dateStart, dateEnd, locationDirection, price);
+    public DomesticTrip(LocalDate dateStart, LocalDate dateEnd, String locationDirection, double price,String name, double discountDriveYourself) {
+        super(dateStart, dateEnd, locationDirection, price, name);
         this.discountDriveYourselfPercent = discountDriveYourself;
     }
 
