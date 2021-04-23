@@ -1,10 +1,15 @@
 package pl.task.travelOfficeManager.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDate;
 
+@Getter
+@Setter
 public class AbroadTrip extends Trip {
 
-    private final double insurance;
+    private double insurance;
 
     public AbroadTrip(LocalDate dateStart, LocalDate dateEnd, String locationDirection, double price, double insurance) {
         super(dateStart, dateEnd, locationDirection, price);

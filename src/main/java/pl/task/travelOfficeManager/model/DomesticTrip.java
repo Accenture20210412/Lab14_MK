@@ -1,10 +1,14 @@
 
 package pl.task.travelOfficeManager.model;
-import java.time.LocalDate;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.time.LocalDate;
+@Getter
+@Setter
 public class DomesticTrip extends Trip{
 
-    private final double discountDriveYourselfPercent;
+    private double discountDriveYourselfPercent;
 
 
     public DomesticTrip(LocalDate dateStart, LocalDate dateEnd, String locationDirection, double price, double discountDriveYourself) {

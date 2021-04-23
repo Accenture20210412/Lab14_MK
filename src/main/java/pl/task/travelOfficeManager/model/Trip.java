@@ -1,40 +1,24 @@
 package pl.task.travelOfficeManager.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.time.LocalDate;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 
 public class Trip {
 
 
-    private final LocalDate dateStart;
-    private final LocalDate dateEnd;
-    private final String locationDirection;
-    private final double price;
+    private LocalDate dateStart;
+    private LocalDate dateEnd;
+    private String locationDirection;
+    private double price;
     private String name;
 
-
-
-    public Trip(LocalDate dateStart, LocalDate dateEnd, String locationDirection, double price) {
-        this.dateStart = dateStart;
-        this.dateEnd = dateEnd;
-        this.locationDirection = locationDirection;
-        this.price = price;
-    }
-
-    public String getLocationDirection() {
-        return locationDirection;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public LocalDate getDateStart() {
-        return dateStart;
-    }
-
-    public double getPrice() {
-        return price;
-    }
 
     @Override
     public String toString() {

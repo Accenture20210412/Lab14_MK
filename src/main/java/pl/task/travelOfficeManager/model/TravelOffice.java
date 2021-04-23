@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 public class TravelOffice {
 
-    private final List<Customer> listOfCustomer;
+    private List<Customer> listOfCustomer;
     Set<Trip> setOfTrip;
 
     public TravelOffice() {
